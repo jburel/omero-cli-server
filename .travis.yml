@@ -16,7 +16,7 @@ before_install:
 
 script:
   - python setup.py sdist
-  - pip install dist/omero-server*gz
+  - pip install dist/omero-cli-server*gz
   - python -c "import omeroserver.version as osv; print(osv.omeroserver_version)"
   - docker build -t test .
   - docker run --rm -ti test
